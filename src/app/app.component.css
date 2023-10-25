@@ -1,0 +1,11 @@
+.conteudo{
+    display: flex;
+}
+
+.conteudo-side{
+    width: 240px;
+}
+
+.conteudo-rotas {
+    flex: 1;
+}

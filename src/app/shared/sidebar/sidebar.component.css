@@ -1,0 +1,99 @@
+.sidebar {
+    width: 240px;
+    background-color: #001326;
+    color: #fff;
+    position: fixed;
+    height: 100%;
+    overflow: hidden;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+
+}
+
+.site-name {
+    font-size: 24px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.site-name > i {
+    font-size: 25px;
+}
+
+.profile-pic {
+    display: block;
+    margin: 0px auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-name {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/* Estilos do menu */
+.menu {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 20px; 
+    width: 100%;
+    
+}
+
+.menu-item {
+    margin-bottom: 10px;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu-item a i {
+    font-size: 20px;
+}
+
+.menu-item a span {
+    font-size: 16px;
+
+}
+
+.menu .active{
+    padding: 10px;
+    background-color: #fff; 
+    border-radius: 10px;
+}
+
+.menu .active span {
+    color: #000; 
+}
+
+.menu .active i {
+
+    color: #000; 
+}
+
+.menu-item a:hover {
+
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #fff; 
+    color: #000;
+    transition: 0.3s;
+}

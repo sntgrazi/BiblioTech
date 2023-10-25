@@ -1,0 +1,68 @@
+<div class="conteudo-cards">
+    <div class="titulo-cards">
+        <span class="">Informações da Biblioteca</span>
+    </div>
+    <div class="cards">
+        <app-card 
+            infoCard="63" 
+            tituloCard="Livros emprestados" 
+            iconCard="fa-book-bookmark">
+        </app-card>
+        <app-card 
+            infoCard="23" 
+            tituloCard="Reservas pendentes" 
+            iconCard="fa-calendar">
+        </app-card>
+        <app-card 
+            infoCard="15" 
+            tituloCard="Membros Registrados" 
+            iconCard="fa-user">
+        </app-card>
+    </div>
+</div>
+<div class="destaque-livro">
+    <div class="titulo-destaque">
+        <span>Livros em destaque</span>
+    </div>
+   <div class="lista-livros">
+    <app-livros-destaque 
+        imgCapa="https://m.media-amazon.com/images/I/71xaBr7jG+L._SY385_.jpg">
+    </app-livros-destaque>
+    <app-livros-destaque 
+        imgCapa="https://m.media-amazon.com/images/I/71XFdg8SW1L._SY385_.jpg">
+    </app-livros-destaque>
+    <app-livros-destaque 
+        imgCapa="https://m.media-amazon.com/images/I/91yEPgRcELL._SY385_.jpg">
+    </app-livros-destaque>
+    <app-livros-destaque 
+        imgCapa="https://m.media-amazon.com/images/I/81SR22dkj7L._SY385_.jpg">
+    </app-livros-destaque>
+    <app-livros-destaque 
+        imgCapa="https://m.media-amazon.com/images/I/51DDyKnPXQL._SY385_.jpg">
+    </app-livros-destaque>
+    
+   </div>
+</div>
+<div class="links-rapidos">
+    <div class="titulo-links">
+        <span>Links rápidos</span>
+    </div>
+    <div class="lista-links">
+        <app-links 
+            links="livros" 
+            tituloLink="Livro">
+        </app-links>
+        <app-links
+            links="pessoas" 
+            tituloLink="Cadastrar Pessoa">
+        </app-links>
+        <app-links
+            links="emprestimo_e_devolucao" 
+            tituloLink="Emprestar">
+        </app-links>
+        <app-links
+            links="emprestimo_e_devolucao" 
+            tituloLink="Devolver">
+        </app-links>
+    </div>
+</div>
