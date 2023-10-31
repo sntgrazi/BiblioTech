@@ -10,7 +10,7 @@
 .header {
     text-align: center;
     padding: 20px;
-
+    margin-top: 20px;
 }
 
 .site-name {
@@ -19,6 +19,7 @@
     display: flex;
     align-items: center;
     gap: 15px;
+    padding: 10px;
 }
 
 .site-name > i {
@@ -42,7 +43,7 @@
 
 /* Estilos do menu */
 .menu {
-    margin-top: 20px;
+    margin-top: 25px;
     display: flex;
     flex-direction: column;
     padding: 0 20px;
@@ -51,9 +52,6 @@
     
 }
 
-.menu-item {
-    margin-bottom: 10px;
-}
 
 .menu-item a {
     text-decoration: none;
@@ -63,6 +61,7 @@
     flex-direction: row;
     align-items: center;
     gap: 30px;
+    padding: 10px;
 }
 
 .menu-item a i {
@@ -71,11 +70,10 @@
 
 .menu-item a span {
     font-size: 16px;
-
+    
 }
 
 .menu .active{
-    padding: 10px;
     background-color: #fff; 
     border-radius: 10px;
 }
@@ -85,15 +83,11 @@
 }
 
 .menu .active i {
-
     color: #000; 
 }
 
 .menu-item a:hover {
-
     border-radius: 10px;
-    padding: 10px;
     background-color: #fff; 
     color: #000;
-    transition: 0.3s;
 }

@@ -3,21 +3,27 @@
         <span class="">Informações da Biblioteca</span>
     </div>
     <div class="cards">
-        <app-card 
-            infoCard="63" 
-            tituloCard="Livros emprestados" 
-            iconCard="fa-book-bookmark">
-        </app-card>
-        <app-card 
-            infoCard="23" 
-            tituloCard="Reservas pendentes" 
-            iconCard="fa-calendar">
-        </app-card>
-        <app-card 
-            infoCard="15" 
-            tituloCard="Membros Registrados" 
-            iconCard="fa-user">
-        </app-card>
+     
+    <app-card class="card"
+        infoCard="63" 
+        tituloCard="Livros emprestados" 
+        iconCard="fa-book-bookmark"
+        [style.background-color]="colors[0]">
+        
+    </app-card>
+    <app-card class="card"
+        infoCard="23" 
+        tituloCard="Reservas pendentes" 
+        iconCard="fa-calendar"
+        [style.background-color]="colors[1]">
+    </app-card>
+    <app-card class="card"
+        infoCard="15" 
+        tituloCard="Membros Registrados" 
+        iconCard="fa-user"
+        [style.background-color]="colors[2]">
+    </app-card>
+
     </div>
 </div>
 <div class="destaque-livro">

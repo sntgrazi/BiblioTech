@@ -1,1 +1,10 @@
-<p>emprest-devolu works!</p>
+<div class="tabela">
+    <app-tabela
+        tituloBotao="Novo Empréstimo"
+        [headerTabela]="['Cod.', 'Livro', 'Pessoa', 'Data Empréstimo','Data Devolução','Status' , 'Ação']"
+        [mostrarImagem]="true"
+        [dados]="jsonData"
+        [buttonArray]="botoes"
+    >
+    </app-tabela>
+</div>

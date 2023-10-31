@@ -9,10 +9,14 @@
 }
 .cards{
     width: 100%;
-
+    
     margin-top: 25px;
     display: flex;
     justify-content: space-between;
+}
+
+.card{
+    border-radius: 15px;
 }
 
 .destaque-livro{
@@ -27,8 +31,9 @@
 .destaque-livro .lista-livros{
     margin-top: 20px;
     display: flex;
-    gap: 50px;
+    gap: 55px;
 }
+
 
 .links-rapidos {
     margin: 0 20px;

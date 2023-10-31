@@ -7,4 +7,24 @@ import { Component } from '@angular/core';
 })
 export class PessoasComponent {
 
+  jsonData = [
+    {
+      "id": "1",
+      "nome": "João Silva",
+      "cpf": "123.456.789-00",
+      "telefone": "(123) 456-7890"
+    },
+    {
+      "id": "2",
+      "nome": "Maria Souza",
+      "cpf": "987.654.321-00",
+      "telefone": "(987) 654-3210"
+    },
+  ]
+
+  botoes = [
+    { icon: 'fa-solid fa-pen-to-square', label: 'Editar' },
+    { icon: 'fa-solid fa-trash', label: 'Excluir' }
+  ]
+
 }

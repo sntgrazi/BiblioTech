@@ -1,34 +1,58 @@
 <div class="table">
     <div class="table-header">
-            <p>Livros</p>
-            <div>
-                <input placeholder="Livros">
-                <button class="add-new">Novo Livro</button>
+            <!-- <p><i class="fa-solid fa-book"></i> Livros</p> -->
+            <div class="controles">
+                <input placeholder="Pesquise aqui...">
+                <button class="add-new"><i class="fa-solid fa-plus"></i> {{ tituloBotao }}</button>
             </div>
     </div>
     <div class="table-section">
         <table>
             <thead>
                 <tr>
-                    <th>S No.</th>
-                    <th>Product</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Owner</th>
-                    <th>Action</th>
+                    <th *ngFor="let tituloColumn of headerTabela">{{ tituloColumn }}</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td><img src="https://m.media-amazon.com/images/I/41zvW5OkqVL._SY445_SX342_.jpg" alt=""></td>
-                    <td>Camera</td>
-                    <td>teste@gmail.com</td>
-                    <td>Teste teste</td>
+                <tr *ngFor="let item of dados">
+                    <td>{{ item.id }}</td>
                     <td>
-                        <button><i class="fa-solid fa-eye"></i></button>
-                        <button><i class="fa-solid fa-pen-to-square"></i></button>
-                        <button><i class="fa-solid fa-trash"></i></button>
+                        <ng-container>
+                            <img [src]="item.imagemUrl" alt="" *ngIf="mostrarImagem">
+                            <span *ngIf="!mostrarImagem">{{ item.nome }}</span>
+                        </ng-container>
+                    </td>
+                    <td>
+                        <ng-container *ngIf="!item.imagemUrl">
+                            {{ item.cpf }}
+                        </ng-container>
+                        <ng-container *ngIf="item.imagemUrl">
+                            {{ item.nome }}
+                        </ng-container>
+                    </td>
+                    <td>
+                        <ng-container *ngIf="!item.imagemUrl">
+                            {{ item.telefone }}
+                        </ng-container>
+                        <ng-container *ngIf="item.imagemUrl">
+                            <ng-container *ngIf="item.isbn">
+                                {{ item.isbn }}
+                              </ng-container>
+                              <ng-container *ngIf="!item.isbn">
+                                {{ item.dtEmprestimo }}
+                              </ng-container>
+                        </ng-container>
+                    </td>
+                    <td *ngIf="item.dtPrevista">
+                        {{item.dtPrevista}}
+                    </td>
+                    <td *ngIf="item.status">
+                        {{item.status}}
+                    </td>
+                    <td>
+                        <button *ngFor="let button of buttonArray" [title]="button.label">
+                            <i [class]="button.icon"></i>
+                        </button>
                     </td>
                 </tr>
             </tbody>

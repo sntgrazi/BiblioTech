@@ -1,3 +1,10 @@
 <div class="tabela">
-    <app-tabela></app-tabela>
+    <app-tabela
+        tituloBotao="Novo Livro"
+        [headerTabela]="['Cod.', 'Livro', 'Nome', 'ISBN', 'Ação']"
+        [mostrarImagem]="true"
+        [dados]="jsonData"
+        [buttonArray]="botoes"
+    >
+    </app-tabela>
 </div>

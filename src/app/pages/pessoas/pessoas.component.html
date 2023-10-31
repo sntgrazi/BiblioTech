@@ -1,1 +1,10 @@
-<p>pessoas works!</p>
+<div class="tabela">
+    <app-tabela
+        tituloBotao="Nova Pessoa"
+        [headerTabela]="['Cod.', 'Nome', 'Cpf', 'Telefone', 'Ação']"
+        [mostrarImagem]="false"
+        [dados]="jsonData"
+        [buttonArray]="botoes"
+    >
+    </app-tabela>
+</div>

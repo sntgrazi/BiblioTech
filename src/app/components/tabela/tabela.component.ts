@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-tabela',
@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class TabelaComponent {
 
+  @Input()
+  tituloBotao:string = "";
+
+  @Input()
+  headerTabela:string[] = [];
+
+  @Input() 
+  dados:any[] = [];
+
+  @Input()
+  mostrarImagem:boolean = false;
+
+  @Input()
+  buttonArray:any[] = [];
 }
