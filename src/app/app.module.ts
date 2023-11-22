@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,8 @@ import { HistoricoComponent } from './pages/historico/historico.component';
 import { LivrosDestaqueComponent } from './components/livros-destaque/livros-destaque.component';
 import { LinksComponent } from './components/links/links.component';
 import { TabelaComponent } from './components/tabela/tabela.component';
+import { ModalComponent } from './components/modal/modal.component';
+import { InputComponent } from './components/input/input.component';
 
 @NgModule({
   declarations: [
@@ -26,11 +29,14 @@ import { TabelaComponent } from './components/tabela/tabela.component';
     HistoricoComponent,
     LivrosDestaqueComponent,
     LinksComponent,
-    TabelaComponent
+    TabelaComponent,
+    ModalComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,6 +5,20 @@
         [mostrarImagem]="true"
         [dados]="jsonData"
         [buttonArray]="botoes"
+        (abrirModalEvent)="abrirModal()"
+>
     >
     </app-tabela>
+ 
 </div>
+
+
+<app-modal 
+[modalAberto]="modalAberto" 
+(closeModal)="fecharModal()"
+titulo="Novo Livro"> 
+<app-input label="Livro" inputType="text" value=""></app-input>
+<app-input label="ISBN" inputType="number" value=""></app-input>
+<app-input label="Editora" inputType="text" value=""></app-input>
+<app-input label="Autor" inputType="text" value=""></app-input>
+</app-modal>

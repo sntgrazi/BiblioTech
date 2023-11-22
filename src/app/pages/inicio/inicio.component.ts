@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
 export class InicioComponent {
   
   colors: string[] = ['#0060BF', '#E94F37', '#44BBA4'];
+  showModal = false;
+
+  toggleModal() {
+    this.showModal = !this.showModal;
+  }
 
 }

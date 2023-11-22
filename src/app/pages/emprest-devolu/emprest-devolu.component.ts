@@ -22,4 +22,15 @@ export class EmprestDevoluComponent {
     { icon: 'fa-solid fa-trash', label: 'Excluir' },
     { icon: 'fa-solid fa-rotate-left', label: 'Devolver'},
   ]
+
+  modalAberto: boolean = false;
+
+  abrirModal() {
+    this.modalAberto = true;
+  }
+ 
+  fecharModal(){
+    this.modalAberto = false;
+  }
+
 }

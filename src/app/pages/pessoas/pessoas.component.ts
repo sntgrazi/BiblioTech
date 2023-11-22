@@ -27,4 +27,14 @@ export class PessoasComponent {
     { icon: 'fa-solid fa-trash', label: 'Excluir' }
   ]
 
+  modalAberto: boolean = false;
+
+  abrirModal() {
+    this.modalAberto = true;
+  }
+ 
+  fecharModal(){
+    this.modalAberto = false;
+  }
+
 }

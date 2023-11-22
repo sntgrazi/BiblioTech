@@ -5,6 +5,13 @@
         [mostrarImagem]="true"
         [dados]="jsonData"
         [buttonArray]="botoes"
+        (abrirModalEvent)="abrirModal()"
     >
     </app-tabela>
 </div>
+
+<app-modal 
+titulo="Novo Emprestimo"
+[modalAberto]="modalAberto" 
+(closeModal)="fecharModal()"> CCCCC
+</app-modal>

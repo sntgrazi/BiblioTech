@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-tabela',
@@ -21,4 +21,10 @@ export class TabelaComponent {
 
   @Input()
   buttonArray:any[] = [];
+
+  @Output() abrirModalEvent = new EventEmitter<void>();
+
+  abrirModal() {
+    this.abrirModalEvent.emit();
+  }
 }
