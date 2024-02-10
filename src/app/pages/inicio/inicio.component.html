@@ -1,73 +1,50 @@
-<div class="conteudo-cards">
-    <div class="titulo-cards">
-        <span class="">Informações da Biblioteca</span>
-    </div>
-    <div class="cards">
-    <app-card class="card"
-        infoCard="63" 
-        tituloCard="Livros emprestados" 
-        iconCard="fa-book-bookmark"
-        [style.background-color]="colors[0]">
-        
-    </app-card>
-    <app-card class="card"
-        infoCard="23" 
-        tituloCard="Reservas pendentes" 
-        iconCard="fa-calendar"
-        [style.background-color]="colors[1]">
-    </app-card>
-    <app-card class="card"
-        infoCard="15" 
-        tituloCard="Membros Registrados" 
-        iconCard="fa-user"
-        [style.background-color]="colors[2]">
-    </app-card>
+<div class="conteudo-telaInicial">
+    <div class="conteudo-cards">
+        <div class="titulo-cards">
+            <span class="">Informações da Biblioteca</span>
+        </div>
+        <div class="cards">
+            <app-card class="card" infoCard="63" tituloCard="Livros emprestados" iconCard=" fa-book-open-reader"
+                [style.background-color]="colors[3]">
+               
+            </app-card>
+            <app-card class="card" infoCard="23" tituloCard="Devoluções pendentes" iconCard="fa-calendar"
+                [style.background-color]="colors[3]">
+            </app-card>
+            <app-card class="card" infoCard="15" tituloCard="Membros Registrados" iconCard="fa-user"
+                [style.background-color]="colors[3]">
+            </app-card>
+            <app-card class="card" infoCard="15" tituloCard="Livros Totais" iconCard="fa-book-bookmark "
+                [style.background-color]="colors[3]">
+            </app-card>
 
+        </div>
     </div>
-</div>
-<div class="destaque-livro">
-    <div class="titulo-destaque">
-        <span>Livros em destaque</span>
+    <div class="livros-links">
+
+        <div class="destaque-livro">
+            <div class="titulo-destaque">
+                <span>Livros mais procurados</span>
+            </div>
+            <div class="destaque-container">
+                <ul class="book-list">
+                    <app-livros-destaque nomeLivro="A culpa é das estrelas" avaliacaoLivro="2"></app-livros-destaque>
+                    <app-livros-destaque nomeLivro="O menino que desenhava monstros" avaliacaoLivro="4"></app-livros-destaque>
+                    <app-livros-destaque nomeLivro="Broken Souls" avaliacaoLivro="3"></app-livros-destaque>
+                </ul>
+            </div>
+        </div>
+
+        <div class="links-rapidos">
+            <div class="titulo-links">
+                <span>Empréstimos a vencer</span>
+            </div>
+            <div class="lista-links">
+                <app-links></app-links>
+            </div>
+        </div>
+        
     </div>
-   <div class="lista-livros">
-    <app-livros-destaque 
-        imgCapa="https://m.media-amazon.com/images/I/71xaBr7jG+L._SY385_.jpg">
-    </app-livros-destaque>
-    <app-livros-destaque 
-        imgCapa="https://m.media-amazon.com/images/I/71XFdg8SW1L._SY385_.jpg">
-    </app-livros-destaque>
-    <app-livros-destaque 
-        imgCapa="https://m.media-amazon.com/images/I/91yEPgRcELL._SY385_.jpg">
-    </app-livros-destaque>
-    <app-livros-destaque 
-        imgCapa="https://m.media-amazon.com/images/I/81SR22dkj7L._SY385_.jpg">
-    </app-livros-destaque>
-    <app-livros-destaque 
-        imgCapa="https://m.media-amazon.com/images/I/51DDyKnPXQL._SY385_.jpg">
-    </app-livros-destaque>
-    
-   </div>
-</div>
-<div class="links-rapidos">
-    <div class="titulo-links">
-        <span>Links rápidos</span>
-    </div>
-    <div class="lista-links">
-        <app-links 
-            links="livros" 
-            tituloLink="Livro">
-        </app-links>
-        <app-links
-            links="pessoas" 
-            tituloLink="Cadastrar Pessoa">
-        </app-links>
-        <app-links
-            links="emprestimo_e_devolucao" 
-            tituloLink="Emprestar">
-        </app-links>
-        <app-links
-            links="emprestimo_e_devolucao" 
-            tituloLink="Devolver">
-        </app-links>
-    </div>
+ 
+    <!--  -->
 </div>

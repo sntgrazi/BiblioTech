@@ -18,23 +18,23 @@
                     <td>{{ item.id }}</td>
                     <td>
                         <ng-container>
-                            <img [src]="item.imagemUrl" alt="" *ngIf="mostrarImagem">
+                            <img [src]="item.url_img" alt="" *ngIf="mostrarImagem">
                             <span *ngIf="!mostrarImagem">{{ item.nome }}</span>
                         </ng-container>
                     </td>
                     <td>
-                        <ng-container *ngIf="!item.imagemUrl">
+                        <ng-container *ngIf="!item.url_img">
                             {{ item.cpf }}
                         </ng-container>
-                        <ng-container *ngIf="item.imagemUrl">
-                            {{ item.nome }}
+                        <ng-container *ngIf="item.url_img">
+                            {{ item.nome_livro }}
                         </ng-container>
                     </td>
                     <td>
-                        <ng-container *ngIf="!item.imagemUrl">
+                        <ng-container *ngIf="!item.url_img">
                             {{ item.telefone }}
                         </ng-container>
-                        <ng-container *ngIf="item.imagemUrl">
+                        <ng-container *ngIf="item.url_img">
                             <ng-container *ngIf="item.isbn">
                                 {{ item.isbn }}
                               </ng-container>

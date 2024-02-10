@@ -1,11 +1,8 @@
-<div class="conteudo">
+<div class="sidebar " [class.open]="isSidebarOpen">
+    <app-sidebar (toggleSidebar)="toggleSidebar($event)"></app-sidebar>
+  </div>
 
-    <div class="conteudo-side">
-        <app-sidebar></app-sidebar>
-    </div>
+<section class="home-section">
+    <router-outlet></router-outlet>
+</section>
 
-    <div class="conteudo-rotas">
-        <router-outlet></router-outlet>
-    </div>
-
-</div>

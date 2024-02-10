@@ -7,10 +7,24 @@ import { Component, Input } from '@angular/core';
 })
 export class LinksComponent {
   
-  @Input()
-  links:string = "";
+  livros = [
+    { titulo: 'Livro 1', diasRestantes: 5 },
+    { titulo: 'Livro 2', diasRestantes: 2 },
+    { titulo: 'Livro 3', diasRestantes: 10 },
+  ];
 
-  @Input()
-  tituloLink:string =  "";
 
+  constructor() { }
+
+  ngOnInit(): void {
+    this.ordenarLivros();
+  }
+
+  isProximo(livro:any): boolean {
+    return livro.diasRestantes <= 2;
+  }
+
+  private ordenarLivros(): void {
+    this.livros.sort((a, b) => a.diasRestantes - b.diasRestantes);
+  }
 }

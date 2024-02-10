@@ -1,3 +1,72 @@
-.livros img {
-    width: 100%;
+
+
+.book-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.book-title {
+    font-weight: bold;
+}
+
+.book-author {
+    color: #555;
+}
+
+.book-details{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.book-rank {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.book-rating {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    color: #ffd700; /* Cor amarela para as estrelas, você pode ajustar conforme necessário */
+}
+
+.book-rating::before {
+    content: '\2605'; /* Código Unicode para uma estrela sólida */
+    margin-right: 4px; /* Espaçamento entre as estrelas */
+}
+
+/* Adicione estrelas vazias para representar a avaliação */
+.book-rating::before:nth-child(n + 6) {
+    content: '\2606'; /* Código Unicode para uma estrela vazia */
+}
+
+/* Ajuste a quantidade de estrelas com base na avaliação */
+.book-rating::before {
+    content: '\2605 \2605 \2605 \2605 \2605'; /* Todas as estrelas sólidas por padrão */
+}
+
+.book-rating[data-rating="1"]::before {
+    content: '\2605 \2606 \2606 \2606 \2606'; /* 1 estrela sólida, 4 estrelas vazias */
+}
+
+.book-rating[data-rating="2"]::before {
+    content: '\2605 \2605 \2606 \2606 \2606'; /* 2 estrelas sólidas, 3 estrelas vazias */
+}
+
+.book-rating[data-rating="3"]::before {
+    content: '\2605 \2605 \2605 \2606 \2606'; /* 3 estrelas sólidas, 2 estrelas vazias */
+}
+
+.book-rating[data-rating="4"]::before {
+    content: '\2605 \2605 \2605 \2605 \2606'; /* 4 estrelas sólidas, 1 estrela vazia */
+}
+
+.book-rating[data-rating="5"]::before {
+    content: '\2605 \2605 \2605 \2605 \2605'; /* Todas as 5 estrelas sólidas */
 }

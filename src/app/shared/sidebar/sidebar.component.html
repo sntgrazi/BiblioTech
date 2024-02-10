@@ -1,15 +1,70 @@
-<div class="sidebar">
-    <div class="header">
-        <div class="site-name"><i class="fa-solid fa-book-open"></i>BiblioTech</div>
-        <img class="profile-pic" src="../../../assets/img/marc.jpeg" alt="Foto de Perfil">
-        <div class="profile-name">Marcinha</div>
+<div class="sidebar " [class.open]="isSidebarOpen" >
+    <div class="logo-details">
+      <i class="fa-solid fa-book-open icon"></i>
+        <div class="logo_name">BiblioTech</div>
+        <i (click)="emitToggleSidebar('open')"  class='bx' [class.bx-menu]="!isSidebarOpen" [class.bx-menu-alt-right]="isSidebarOpen"  id="btn" ></i>
     </div>
-    <div class="menu">
-        <div class="menu-item "><a [routerLink]="['/']" ><i class="fa-solid fa-house"></i><span>Início</span></a></div>
-        <div class="menu-item"><a [routerLink]="['/livros']"><i class="fa-solid fa-book"></i><span>Livros</span></a></div>
-        <div class="menu-item "><a [routerLink]="['/pessoas']"><i class="fa-solid fa-users"></i><span>Pessoas</span></a></div>
-        <div class="menu-item"><a [routerLink]="['/emprestimo_e_devolucao']"><i class="fa-solid fa-people-carry-box"></i><span>Empréstimos e Devoluções</span></a></div>
-        <!-- <div class="menu-item "><a [routerLink]="['/historico']"><i class="fa-solid fa-clock-rotate-left"></i><span>Histórico de Empréstimos</span></a></div> -->
-        <div class="menu-item"><a href="#"><i class="fa-solid fa-right-from-bracket fa-rotate-180"></i><span>Sair</span></a></div>
+    <div class="profile-details">
+      <img src="../../../assets/img/marc2.jpeg" alt="profileImg">
+      <div class="name_job">
+        <div class="name">Marcinha</div>
+      </div>
     </div>
-</div>
+    <ul class="nav-list">
+      <li>
+        <a [routerLink]="['/']" >
+          <i class="fa-solid fa-house"></i>
+          <span class="links_name">Inicio</span>
+        </a>
+         <span class="tooltip">Inicio</span>
+      </li>
+      <li>
+        <a [routerLink]="['/livros']">
+          <i class="fa-solid fa-book"></i>
+         <span class="links_name">Livros</span>
+       </a>
+       <span class="tooltip">Livros</span>
+     </li>
+     <li>
+        <a [routerLink]="['/pessoas']">
+          <i class="fa-solid fa-user"></i>
+         <span class="links_name">Pessoas</span>
+       </a>
+       <span class="tooltip">Pessoas</span>
+     </li>
+     <li>
+        <a [routerLink]="['/emprestimo_e_devolucao']">
+          <i class="fa-solid fa-rotate-left"></i>
+         <span class="links_name">Empréstimos e <br> Devoluções</span>
+       </a>
+       <span class="tooltip">Empréstimos e Devoluções</span>
+     </li>
+     <li>
+      <a >
+        <i class="fa-solid fa-file-invoice-dollar"></i>
+       <span class="links_name">Multas</span>
+     </a>
+     <span class="tooltip">Multas</span>
+   </li>
+     <li>
+      <a >
+        <i class="fa-solid fa-clipboard"></i>
+       <span class="links_name">Relatórios</span>
+     </a>
+     <span class="tooltip">Relatórios</span>
+   </li>
+   <li>
+    <a >
+      <i class='bx bxs-chat'></i>
+     <span class="links_name">Forum</span>
+   </a>
+   <span class="tooltip">Forum</span>
+ </li>
+     <li class="profile">
+      <i class="fa-solid fa-right-from-bracket fa-flip-horizontal"></i>
+         <span>Sair</span>
+     </li>
+    </ul>
+  </div>
+
+  

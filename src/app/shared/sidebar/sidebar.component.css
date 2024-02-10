@@ -1,93 +1,193 @@
-.sidebar {
-    width: 240px;
-    background-color: #001326;
-    color: #fff;
-    position: fixed;
-    height: 100%;
-    overflow: hidden;
+.sidebar .logo-details {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
-.header {
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
+.sidebar .logo-details .icon {
+  opacity: 0;
+  transition: all 0.5s ease;
 }
 
-.site-name {
-    font-size: 24px;
-    margin-bottom: 30px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 10px;
+.sidebar .logo-details .logo_name {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0;
+  transition: all 0.5s ease;
 }
 
-.site-name > i {
-    font-size: 25px;
+.sidebar.open .logo-details .icon,
+.sidebar.open .logo-details .logo_name {
+  opacity: 1;
 }
 
-.profile-pic {
-    display: block;
-    margin: 0px auto;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
+.sidebar .logo-details #btn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: all 0.4s ease;
+  font-size: 23px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
 }
 
-.profile-name {
-    text-align: center;
-    margin: 10px 0;
-    font-size: 18px;
+.sidebar.open .logo-details #btn {
+  text-align: right;
 }
 
-/* Estilos do menu */
-.menu {
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-    padding: 0 20px;
-    gap: 20px; 
-    width: 100%;
-    
+.sidebar i {
+  color: #fff;
+  height: 60px;
+  min-width: 50px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 60px;
+}
+
+.sidebar .nav-list {
+  margin-top: 20px;
+  height: 100%;
+}
+
+.sidebar li {
+  position: relative;
+  margin: 8px 0;
+  list-style: none;
+}
+
+.sidebar li .tooltip {
+  position: absolute;
+  top: -20px;
+  left: calc(100% + 15px);
+  z-index: 3;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: 0s;
+}
+
+.sidebar li:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sidebar.open li .tooltip {
+  display: none;
 }
 
 
-.menu-item a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 30px;
-    padding: 10px;
+.sidebar li a {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  background: #11101D;
 }
 
-.menu-item a i {
-    font-size: 20px;
+.sidebar li a:hover {
+  background: #FFF;
 }
 
-.menu-item a span {
-    font-size: 16px;
-    
+.sidebar li a .links_name {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
 }
 
-.menu .active{
-    background-color: #fff; 
-    border-radius: 10px;
+.sidebar.open li a .links_name {
+  opacity: 1;
+  pointer-events: auto;
 }
 
-.menu .active span {
-    color: #000; 
+.sidebar li a:hover .links_name,
+.sidebar li a:hover i {
+  transition: all 0.5s ease;
+  color: #11101D;
 }
 
-.menu .active i {
-    color: #000; 
+.sidebar li i {
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  border-radius: 12px;
 }
 
-.menu-item a:hover {
-    border-radius: 10px;
-    background-color: #fff; 
-    color: #000;
+.sidebar li.profile {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width: 78px;
+  left: 0;
+  bottom: -8px;
+  padding: 10px 14px;
+  background: #1d1b31;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  color: white;
+}
+
+.sidebar:not(.open)  li.profile span{
+  display: none;
+}
+
+.sidebar.open li.profile {
+  width: 250px;
+}
+
+
+.sidebar .profile-details {
+  margin: 30px 0 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 15px;
+}
+
+.name_job {
+  display: none;
+}
+
+
+.sidebar .profile-details img{
+  height: 65%;
+  width: 65%;
+  object-fit: cover;
+  border-radius: 30%;
+  border: 2px solid white; 
+}
+
+.sidebar.open  .name_job {
+  color: white;
+  display: block;
+}
+
+
+@media (max-width: 420px) {
+  .sidebar li .tooltip {
+    display: none;
+  }
 }

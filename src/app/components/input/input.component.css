@@ -1,0 +1,18 @@
+.formInput{
+    display: flex;
+    flex-direction: column;
+}
+
+.formInput label{
+    font-size: 1.1em;
+}
+
+.formInput input{
+    padding: 10px;
+    font-size: 16px;
+    border: 1px #000 solid;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+    
+}

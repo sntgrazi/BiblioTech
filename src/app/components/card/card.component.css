@@ -2,7 +2,6 @@
     width: 100%;
     padding: 20px;
     
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
     display: flex;
     align-items: center;
@@ -12,7 +11,7 @@
 
 .card-conteudo{
     width: 100%;
-    color: white;
+    color: #000;
    
 }
 .card-content {
@@ -23,7 +22,7 @@
 
 .card-icon{
     font-size: 60px;
-    color: rgba(0, 0, 0, 0.466);
+    color: rgba(0, 0, 0, 0.555);
  
 }
 

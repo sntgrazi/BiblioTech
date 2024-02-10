@@ -1,3 +1,10 @@
-<div class="livros">
-    <img src="{{ imgCapa }}" alt="capa">
-</div>
+<li class="book-item">
+    <div class="book-details">
+        <span class="book-rank">1</span>
+        <span class="book-title">{{ nomeLivro }}</span>
+       
+    </div>
+    <span class="book-rating" [attr.data-rating]="avaliacaoLivro">Avaliação:  </span>
+
+
+</li>

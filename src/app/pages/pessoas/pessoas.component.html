@@ -1,17 +1,55 @@
 <div class="tabela">
-    <app-tabela
-        tituloBotao="Nova Pessoa"
-        [headerTabela]="['Cod.', 'Nome', 'Cpf', 'Telefone', 'Ação']"
-        [mostrarImagem]="false"
-        [dados]="jsonData"
-        [buttonArray]="botoes"
-        (abrirModalEvent)="abrirModal()"
-    >
+    <app-tabela tituloBotao="Nova Pessoa" [headerTabela]="['Cod.', 'Nome', 'Cpf', 'Telefone', 'Ação']"
+        [mostrarImagem]="false" [dados]="jsonData" [buttonArray]="botoes" (abrirModalEvent)="abrirModal()">
     </app-tabela>
 </div>
 
-<app-modal 
-titulo="Nova Pessoa"
-[modalAberto]="modalAberto" 
-(closeModal)="fecharModal()"> BBBBBB
+<app-modal titulo="Nova Pessoa" [modalAberto]="modalAberto" (closeModal)="fecharModal()">
+
+    <div class="tamanhoVariado">
+        <div class="col-8">
+            <app-input label="Nome" inputType="text" value=""></app-input>
+        </div>
+
+        <div class="col-4">
+            <app-input label="Cpf" inputType="text" value=""></app-input>
+        </div>
+    </div>
+
+    <div class="tamanhoVariado">
+
+        <div class="col-3">
+            <app-input label="Data de nascimento" inputType="text" value=""></app-input>
+        </div>
+        <div class="col-4">
+            <app-input label="Telefone" inputType="text" value=""></app-input>
+        </div>
+
+        <div class="col-6">
+            <app-input label="Email" inputType="text" value=""></app-input>
+        </div>
+    </div>
+
+    <div class="tamanhoVariado">
+        <div class="col-9">
+            <app-input label="Endereço" inputType="text" value=""></app-input>
+        </div>
+        <div class="col-4">
+            <app-input label="Cep" inputType="text" value=""></app-input>
+        </div>
+        
+    </div>
+
+    <div class="tamanhoVariado">
+        <div class="col-2">
+            <app-input label="N°" inputType="text" value=""></app-input>
+        </div>
+        <div class="col-4">
+            <app-input label="Bairro" inputType="text" value=""></app-input>
+        </div>
+        <div class="col-6">
+            <app-input label="Cidade" inputType="text" value=""></app-input>
+        </div>
+    </div>
+
 </app-modal>

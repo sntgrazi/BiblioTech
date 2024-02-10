@@ -10,8 +10,13 @@
     </app-tabela>
 </div>
 
-<app-modal 
-titulo="Novo Emprestimo"
-[modalAberto]="modalAberto" 
-(closeModal)="fecharModal()"> CCCCC
+<app-modal titulo="Novo Emprestimo" [modalAberto]="modalAberto" (closeModal)="fecharModal()"> 
+
+ 
+        <div class="form-container">
+            <app-input label="Pessoa" inputType="text" value="" class="col-12"></app-input>
+            <button class="search-button">Pesquisar</button>
+        </div>
+
+
 </app-modal>

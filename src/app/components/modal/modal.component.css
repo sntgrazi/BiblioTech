@@ -7,12 +7,11 @@
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 1000;
     border-radius: 5px;
-
-
   }
   
   .modal-content {
-    width: 500px;
+    width: 50%;
+    height: 58%;
     background-color: #fff;
     margin: 0 auto;
     position: absolute;
@@ -75,9 +74,18 @@
     color: #000;
   }
 
-  .modal-footer button{
-    cursor: pointer;
+  .modal-footer button {
+
+      background-color: #3498db; /* Cor de fundo azul */
+      color: #fff; /* Cor do texto branco */
+      border: 1px solid #3498db; /* Borda azul */
+      padding: 10px 20px; /* Preenchimento interno */
+      border-radius: 5px; /* Borda arredondada */
+      cursor: pointer; /* Cursor de mão ao passar por cima */
+      font-size: 16px; /* Tamanho da fonte */
+  
   }
+  
   
   .modal-backdrop {
     position: fixed;
@@ -102,3 +110,7 @@
     height: 100%;
     object-fit: cover;
   }
+
+
+
+ 

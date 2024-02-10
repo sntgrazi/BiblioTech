@@ -1,24 +1,47 @@
 <div class="tabela">
-    <app-tabela
-        tituloBotao="Novo Livro"
-        [headerTabela]="['Cod.', 'Livro', 'Nome', 'ISBN', 'Ação']"
-        [mostrarImagem]="true"
-        [dados]="jsonData"
-        [buttonArray]="botoes"
-        (abrirModalEvent)="abrirModal()"
->
-    >
+    <app-tabela tituloBotao="Novo Livro" [headerTabela]="['Cod.', 'Livro', 'Nome', 'ISBN', 'Ação']"
+        [mostrarImagem]="true" [dados]="jsonData" [buttonArray]="botoes" (abrirModalEvent)="abrirModal()">
+        >
     </app-tabela>
- 
+
 </div>
 
 
-<app-modal 
-[modalAberto]="modalAberto" 
-(closeModal)="fecharModal()"
-titulo="Novo Livro"> 
-<app-input label="Livro" inputType="text" value=""></app-input>
-<app-input label="ISBN" inputType="number" value=""></app-input>
-<app-input label="Editora" inputType="text" value=""></app-input>
-<app-input label="Autor" inputType="text" value=""></app-input>
+<app-modal [modalAberto]="modalAberto" (closeModal)="fecharModal()" titulo="Novo Livro">
+    <div class="col-12">
+        <app-input label="Livro" inputType="text" value=""></app-input>
+    </div>
+    <div class="tamanhoVariado">
+        <div class="col-8">
+            <app-input label="ISBN" inputType="text" value=""></app-input>
+        </div>
+
+        <div class="col-4">
+            <app-input label="Ano Lançamento" inputType="text" value=""></app-input>
+        </div>
+    </div>
+
+    <div class="tamanhoVariado">
+        <div class="col-6">
+            <app-input label="Autor" inputType="text" value=""></app-input>
+        </div>
+
+        <div class="col-6">
+            <app-input label="Editora" inputType="text" value=""></app-input>
+        </div>
+    </div>
+
+    <div class="tamanhoVariado">
+        <div class="col-5">
+            <app-input label="Valor do Aluguel" inputType="text" value=""></app-input>
+        </div>
+        <div class="col-4">
+            <app-input label="Categoria" inputType="text" value=""></app-input>
+        </div>
+        <div class="col-3">
+            <app-input label="Estoque" inputType="text" value=""></app-input>
+        </div>
+    </div>
+
+
 </app-modal>

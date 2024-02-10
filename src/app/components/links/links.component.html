@@ -1,3 +1,9 @@
-<div class="links">
-    <span><a [routerLink]="['/', links]">{{ tituloLink }}</a></span>
+<div class="livro" *ngFor="let livro of livros" [ngClass]="{'proximo': isProximo(livro)}">
+  <div class="livro-details">
+    <h3>{{ livro.titulo }}</h3>
+    <p>Faltam {{ livro.diasRestantes }} dias para devolução</p>
+  </div>
+  <button class="ver-detalhes" >
+    <i class="fas fa-eye"></i>
+  </button>
 </div>

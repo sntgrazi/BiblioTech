@@ -1,0 +1,49 @@
+.tamanhoVariado {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+
+.tamanhoVariado>.col-3 {
+    width: 20%;
+}
+
+.tamanhoVariado>.col-4 {
+    width: 40%;
+}
+
+.tamanhoVariado>.col-5 {
+    width: 40%;
+}
+
+.tamanhoVariado>.col-6 {
+    width: 50%;
+}
+
+.tamanhoVariado>.col-8 {
+    width: 60%;
+}
+
+.tamanhoVariado>.col-12 {
+    width: 100%;
+}
+
+@media (max-width: 880px) {
+    .tamanhoVariado {
+        flex-wrap: wrap;
+
+    }
+
+    .tamanhoVariado>.col-12,
+    .tamanhoVariado>.col-8,
+    .tamanhoVariado>.col-6,
+    .tamanhoVariado>.col-5,
+    .tamanhoVariado>.col-4,
+    .tamanhoVariado>.col-3 {
+        width: 100%;
+    }
+
+}
